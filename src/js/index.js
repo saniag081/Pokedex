@@ -7,5 +7,6 @@ async function getPokemon(id) {
 async function init() {
 	const firstPokemon = await getPokemon(150)
 	window.pokemonName.textContent = firstPokemon.name;
+	window.pokemonImage.setAttribute('src', firstPokemon.sprites.front_default)
 }
 init()
